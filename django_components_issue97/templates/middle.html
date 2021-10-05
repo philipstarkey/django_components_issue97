@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block content %}
+    {% component_block "container" %}
+        {% slot "containercontent" %}
+          {% block middlecomponentcontent %}
+            <p>middle.html: block "content": component_block "container": slot "containercontent": block "middlecomponentcontent": default text. Should not be visible.</p>
+          {% endblock middlecomponentcontent %}
+        {% endslot %}
+      {% endcomponent_block %}
+{% endblock content %}

@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block componentcontent %}
+    <p>block_in_component.html: block "componentcontent": This text should appear.</p>
+{% endblock componentcontent %}
+
+{% block content %}
+    {% comment %}Hide this as it's only for block in component in block{% endcomment %}
+    <p></p>
+{% endblock content %}
