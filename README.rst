@@ -12,6 +12,33 @@ Test repo for EmilStenstrom/django-components#97
 
 :License: BSD
 
+
+Purpose
+-------
+The purpose of the repo is to recreate issue #97 in django-components. This issue relates to not being able to nest :code:`{% block content %}` template blocks within components. As such, this test repo contains a Django app that contains pages for two examples where this doesn't work, one where the component and block are in the base template, and one where they are in an intermediate template inside another block.
+
+This repo was derived from the cookiecutter package and the cookiecutter-django project (see documentation on these further down the page).
+
+
+Building
+--------
+To build the development docker image (assumes you have docker installed), run:
+
+::
+
+  $ docker-compose -f local.yml build
+
+
+Launching development server
+----------------------------
+Run:
+
+::
+
+  $ docker-compose -f local.yml up
+
+You can then access the Django webapp via localhost:9000 (port can be changed in the :code:`local.yaml` file)
+
 Settings
 --------
 
